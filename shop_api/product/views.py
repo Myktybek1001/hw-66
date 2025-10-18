@@ -26,11 +26,17 @@ def product_list_api_view(request):
 class CategoryList(ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+   
 
 
 class CategoryDetail(RetrieveAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class ProductReviewListAPIView(ListAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
 
 
 
