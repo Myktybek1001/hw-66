@@ -22,11 +22,12 @@ from product import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('api/v1/categories/', views.CategoryList.as_view()),
-    path('api/v1/categories/<int:pk>/', views.CategoryDetail.as_view()),
-
-    path('api/v1/products/', views.product_list_api_view),
     path('api/v1/products/<int:pk>/', views.product_detail_api_view),
+    path('api/v1/products/', views.product_list_api_view),
 
-    path('api/v1/products/reviews/', views.ProductReviewListAPIView.as_view()),  # IGNORE  
+    path('api/v1/categories/<int:pk>/', views.CategoryDetail.as_view()),
+    path('api/v1/categories/', views.CategoryList.as_view()),
+
+    path('api/v1/products/reviews/<int:pk>/', views.ProductReviewListAPIView.as_view()),
+    path('api/v1/products/reviews/', views.ProductReviewListAPIView.as_view()),
 ]

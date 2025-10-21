@@ -17,7 +17,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = 'id title description price category reviews rating'.split()
+        fields = 'id title description price category reviews '.split()
 
 
 
